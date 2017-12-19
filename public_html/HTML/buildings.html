@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>index</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style>
+.chosen-container {
+	position: relative;
+	display: initial !important;
+	vertical-align: middle;
+	font-size: 13px;
+	zoom: 1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.btn {
+	border-radius: 0px;
+}
+.pagination>li>a, .pagination>li>span {
+	border-radius: 50% !important;
+	margin: 0 5px;
+}
+</style>
+</head>
+<body>
+<header class="">
+<div class="container">
+<div class="row">
+  <div class="col-lg-2"><a href="#"><img src="image/logo_site.png" class="img-responsive" style="margin:10px 0px;"></a></div>
+  <div class="col-lg-10">
+  <div class="rigit_sign"><a href="sign.html" >Sign In</a></div>
+  </div>
+  </div>
+  </div>
+</header>
+<div class=" container-fluid nav-container border_buttom"> 
+  <!-- Static navbar -->
+  <div class="navbar navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <!--          <a class="navbar-brand" href="#">Project name</a>--> 
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">SALES </a></li>
+          <li class="dropdown menu-large"> <a href="rentals.html" class="dropdown-toggle" data-toggle="dropdown"> RENTALS</a>
+            <ul class="dropdown-menu megamenu row">
+              <li class="col-sm-3">
+                <ul>
+                  <li><a href="#" class="nav-child">Tenant community</a></li>
+                  <li><a href="#">Central West</a></li>
+                  <li><a href="#">City & East</a></li>
+                  <li><a href="#">Inner West </a></li>
+                  <li><a href="#">Canterbury Bankstown</a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li><a href="#" class="nav-child">Living in my home</a></li>
+                  <li><a href="#">Rent & Payments</a></li>
+                  <li><a href="#">Block Meetings</a></li>
+                  <li><a href="#">Complaints & Appeals</a></li>
+                  <li><a href="#">Neighbour Disputes</a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li><a href="#" class="nav-child">Getting involved</a></li>
+                  <li><a href="#">Building bridges</a></li>
+                  <li><a href="#">TAG</a></li>
+                  <li><a href="#">Tenants workshops</a></li>
+                  <li><a href="#">Aboriginal working group</a></li>
+                  <li><a href="#">Tenant survey</a></li>
+                  <li><a href="#">Your views</a></li>
+                  <li><a href="#">What's on</a></li>
+                  <li><a href="#">Photos</a></li>
+                  <li><a href="#">Stories</a></li>
+                  <li><a href="#">Community gardens </a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li><a href="#" class="nav-child">I Need Help</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Housing team</a></li>
+                  <li><a href="#">Jobs</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="buildings.html">BUILDINGS</a></li>
+          <li><a href="#" class="last">BLOG</a></li>
+        </ul>
+        <div class="col-sm-3 col-md-3 pull-right">
+          <form class="navbar-form" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control form-controls" placeholder="Search" name="q">
+              <div class="input-group-btn">
+                <button class="btn btn-default btns" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg">
+          <li><a href=""><i class="fa fa-lock"></i> Tenant login</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="">
+    <div class="col-lg-12">
+      <div>
+        <h3> Search Buildings </h3>
+      </div>
+      <div class="row margin_top">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="name">LOCATION</label>
+            <select multiple class="chosen-select form-control form-control2">
+              <option>American Black Bear</option>
+              <option>Asiatic Black Bear</option>
+              <option>Brown Bear</option>
+              <option>Giant Panda</option>
+              <option>Sloth Bear</option>
+              <option>Sun Bear</option>
+              <option>Polar Bear</option>
+              <option>Spectacled Bear</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label" for="name">BUILDING TYPE</label>
+            <select  multiple="multiple" class="teams form-control2">
+              <option value="D1">Condos</option>
+              <option value="P1">Co-ops</option>
+              <option value="M">Multi-families</option>
+              <option value="R">Rental Units</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label" for="name">AMENITIES</label>
+            <select  multiple="multiple" class="teams form-control2" >
+              <option value="doorman">Doorman</option>
+              <option value="elevator">Elevator</option>
+              <option value="leed_registered">Green Building</option>
+              <option value="gym">Gym</option>
+              <option value="laundry">Laundry in Building</option>
+              <option value="parking">Parking Available</option>
+              <option value="pets">Pets Allowed</option>
+              <option value="pool">Swimming Pool</option>
+              <option value="fios_available">Verizon FiOS Enabled</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label" for="name">&nbsp;</label>
+            <div class="form-group pull-right" style="margin-top: ;">
+              <button type="button" class="btn btn-primary btn2">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid bg_warepper">
+  <div class="container">
+    <div class="">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="box"> <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <div class="info">
+            <div class="BuildingCard-info" data-clickable="true">
+              <h3 class="BuildingCard-title"> Rental in <a class="BuildingCard-titleLink" href="#">Fort Greene</a> </h3>
+              <a class="BuildingCard-addressLink" href="#"></a> <a class="BuildingCard-addressLink" data-click="link" href="#">300 Ashland Place</a>
+              <div class="BuildingCard-properties">
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--units"></span> 379 Units </div>
+                <div class="BuildingCard-property BuildingCard-property--divided"></div>
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--stories"></span> 35 Stories </div>
+                <div class="BuildingCard-property BuildingCard-property--divided"></div>
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--build"></span> 2016 Built </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="box"> <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <div class="info">
+            <div class="BuildingCard-info" data-clickable="true">
+              <h3 class="BuildingCard-title"> Rental in <a class="BuildingCard-titleLink" href="#">Fort Greene</a> </h3>
+              <a class="BuildingCard-addressLink" href="#"></a> <a class="BuildingCard-addressLink" data-click="link" href="#">300 Ashland Place</a>
+              <div class="BuildingCard-properties">
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--units"></span> 379 Units </div>
+                <div class="BuildingCard-property BuildingCard-property--divided"></div>
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--stories"></span> 35 Stories </div>
+                <div class="BuildingCard-property BuildingCard-property--divided"></div>
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--build"></span> 2016 Built </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div class="box"> <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <div class="info">
+            <div class="BuildingCard-info" data-clickable="true">
+              <h3 class="BuildingCard-title"> Rental in <a class="BuildingCard-titleLink" href="#">Fort Greene</a> </h3>
+              <a class="BuildingCard-addressLink" href="#"></a> <a class="BuildingCard-addressLink" data-click="link" href="#">300 Ashland Place</a>
+              <div class="BuildingCard-properties">
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--units"></span> 379 Units </div>
+                <div class="BuildingCard-property BuildingCard-property--divided"></div>
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--stories"></span> 35 Stories </div>
+                <div class="BuildingCard-property BuildingCard-property--divided"></div>
+                <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--build"></span> 2016 Built </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <hr style="width: 100%; display: -webkit-inline-box;">
+    </div>
+    <div>
+      <div class="col-lg-3">
+        <article>
+          <div class="left-mag"><img src="https://wp.zillowstatic.com/streeteasy/2/shutterstock_410338984-795b67-220x147.jpg"></div>
+          <div> <a class="Feeds-itemTitle" href="#">Bangkok</a> <a class="Feeds-itemDescription" href="#">#StreetEasyFinds: Our Favorite Photos From September 2017</a> </div>
+        </article>
+      </div>
+      <div class="col-lg-3">
+        <article>
+          <div class="left-mag"><img src="https://wp.zillowstatic.com/streeteasy/2/shutterstock_410338984-795b67-220x147.jpg"></div>
+          <div> <a class="Feeds-itemTitle" href="#">Bangkok</a> <a class="Feeds-itemDescription" href="#">#StreetEasyFinds: Our Favorite Photos From September 2017</a> </div>
+        </article>
+      </div>
+      <div class="col-lg-3">
+        <article>
+          <div class="left-mag"><img src="https://wp.zillowstatic.com/streeteasy/2/shutterstock_410338984-795b67-220x147.jpg"></div>
+          <div> <a class="Feeds-itemTitle" href="#">Bangkok</a> <a class="Feeds-itemDescription" href="#">#StreetEasyFinds: Our Favorite Photos From September 2017</a> </div>
+        </article>
+      </div>
+      <div class="col-lg-3">
+        <article>
+          <div class="left-mag"><img src="https://wp.zillowstatic.com/streeteasy/2/shutterstock_410338984-795b67-220x147.jpg"></div>
+          <div> <a class="Feeds-itemTitle" href="#">Bangkok</a> <a class="Feeds-itemDescription" href="#">#StreetEasyFinds: Our Favorite Photos From September 2017</a> </div>
+        </article>
+      </div>
+    </div>
+    <hr style="width: 100%; display: -webkit-inline-box;">
+    <div>
+      <div class="col-lg-12">
+        <h2 class="Offers-title">Popular Buildings</h2>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="box2">
+          <h3 class="Offers-itemTitle">Manhattan</h3>
+          <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <ul style="list-style: none;">
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">ORION Condominium</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Capitol at Chelsea</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">100 Maiden Lane</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Trump Parc</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Two WorldWide Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">30 Lincoln Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Centria</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Gramercy Place Condo</span></a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="box2">
+          <h3 class="Offers-itemTitle">Manhattan</h3>
+          <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <ul style="list-style: none;">
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">ORION Condominium</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Capitol at Chelsea</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">100 Maiden Lane</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Trump Parc</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Two WorldWide Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">30 Lincoln Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Centria</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Gramercy Place Condo</span></a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="box2">
+          <h3 class="Offers-itemTitle">Manhattan</h3>
+          <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <ul style="list-style: none;">
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">ORION Condominium</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Capitol at Chelsea</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">100 Maiden Lane</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Trump Parc</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Two WorldWide Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">30 Lincoln Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Centria</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Gramercy Place Condo</span></a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="box2">
+          <h3 class="Offers-itemTitle">Manhattan</h3>
+          <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <ul style="list-style: none;">
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">ORION Condominium</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Capitol at Chelsea</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">100 Maiden Lane</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Trump Parc</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Two WorldWide Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">30 Lincoln Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Centria</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Gramercy Place Condo</span></a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr style="width: 100%; display: -webkit-inline-box;">
+    <div>
+      <div class="col-lg-12">
+        <h2 class="Offers-title">Popular Buildings</h2>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="box2">
+          <h3 class="Offers-itemTitle">Manhattan</h3>
+          <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <ul style="list-style: none;">
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">ORION Condominium</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Capitol at Chelsea</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">100 Maiden Lane</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Trump Parc</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Two WorldWide Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">30 Lincoln Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Centria</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Gramercy Place Condo</span></a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="box2">
+          <h3 class="Offers-itemTitle">Manhattan</h3>
+          <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <ul style="list-style: none;">
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">ORION Condominium</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Capitol at Chelsea</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">100 Maiden Lane</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Trump Parc</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Two WorldWide Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">30 Lincoln Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Centria</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Gramercy Place Condo</span></a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="box2">
+          <h3 class="Offers-itemTitle">Manhattan</h3>
+          <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <ul style="list-style: none;">
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">ORION Condominium</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Capitol at Chelsea</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">100 Maiden Lane</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Trump Parc</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Two WorldWide Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">30 Lincoln Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Centria</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Gramercy Place Condo</span></a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <div class="box2">
+          <h3 class="Offers-itemTitle">Manhattan</h3>
+          <img src="https://cdn-img2.streeteasy.com/nyc/image/14/217930214.jpg">
+          <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          <ul style="list-style: none;">
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">ORION Condominium</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Capitol at Chelsea</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">100 Maiden Lane</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Trump Parc</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">Two WorldWide Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">30 Lincoln Plaza</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Centria</span></a> </li>
+            <li class="Offers-addressItem"> <a class="Offers-addressLink" href="#"><span class="Offers-addressText">The Gramercy Place Condo</span></a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class=" container-fluid footer">
+  <div class="container">
+    <div class="row">
+      <ul class="footer_buttom">
+        <li><a  href="#">Zillow</a></li>
+        <li><a  href="#">Trulia</a></li>
+        <li><a  href="#">Hotpads</a></li>
+        <li><a  href="#">Naked apartments</a></li>
+        <li><a  href="#">Hreo</a></li>
+        <li><a  href="#">RealEstate.com</a></li>
+      </ul>
+      <div class="footer_text"> <span class="Footer-text"> Zillow Inc. Sites © 2006-2017 Zillow <span class="only-print"><b>https://streeteasy.com/</b></span> <a class="Footer-text" href="#" rel="nofollow">Made In Bangkok</a> Powered by Bikes, Coffee and Doughnuts. </span> </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="vote" tabindex="-1" role="dialog" aria-labelledby="voteLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="panel-title" id="voteLabel"><span class="glyphicon glyphicon-arrow-right"></span> Refine Your Search</h4>
+      </div>
+      <div class="modal-body">
+        <div class="">
+          <div class="row margin_top">
+            <div class="col-md-9">
+              <div class="form-group">
+                <label class="control-label" for="name">LOCATION</label>
+                <select multiple class="chosen-select form-control form-control2">
+                  <option>American Black Bear</option>
+                  <option>Asiatic Black Bear</option>
+                  <option>Brown Bear</option>
+                  <option>Giant Panda</option>
+                  <option>Sloth Bear</option>
+                  <option>Sun Bear</option>
+                  <option>Polar Bear</option>
+                  <option>Spectacled Bear</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="control-label" for="name">TYPE</label>
+                <select id="appointmentfor" name="appointmentfor" class="form-control form-control2">
+                  <option value="Service#1">Service#1</option>
+                  <option value="Service#2">Service#2</option>
+                  <option value="Service#3">Service#3</option>
+                  <option value="Service#4">Service#4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row margin_top">
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="control-label" for="name">PRICE</label>
+                <select class="form-control form-control2">
+                  <option value="">Any</option>
+                  <option value="Custom">» Custom</option>
+                  <option value="100000">฿100,000</option>
+                  <option value="150000">฿150,000</option>
+                  <option value="200000">฿200,000</option>
+                  <option value="250000">฿250,000</option>
+                  <option value="300000">฿300,000</option>
+                  <option value="400000">฿400,000</option>
+                  <option value="500000">฿500,000</option>
+                  <option value="600000">฿600,000</option>
+                  <option value="700000">฿700,000</option>
+                  <option value="750000">฿750,000</option>
+                  <option value="800000">฿800,000</option>
+                  <option value="900000">฿900,000</option>
+                  <option value="1000000">฿1,000,000</option>
+                  <option value="1250000">฿1,250,000</option>
+                  <option value="1500000">฿1,500,000</option>
+                  <option value="1750000">฿1,750,000</option>
+                  <option value="2000000">฿2,000,000</option>
+                  <option value="2250000">฿2,250,000</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="control-label" for="name">&nbsp;</label>
+                <select class="form-control form-control2">
+                  <option value="">Any</option>
+                  <option value="Custom">» Custom</option>
+                  <option value="100000">฿100,000</option>
+                  <option value="150000">฿150,000</option>
+                  <option value="200000">฿200,000</option>
+                  <option value="250000">฿250,000</option>
+                  <option value="300000">฿300,000</option>
+                  <option value="400000">฿400,000</option>
+                  <option value="500000">฿500,000</option>
+                  <option value="600000">฿600,000</option>
+                  <option value="700000">฿700,000</option>
+                  <option value="750000">฿750,000</option>
+                  <option value="800000">฿800,000</option>
+                  <option value="900000">฿900,000</option>
+                  <option value="1000000">฿1,000,000</option>
+                  <option value="1250000">฿1,250,000</option>
+                  <option value="1500000">฿1,500,000</option>
+                  <option value="1750000">฿1,750,000</option>
+                  <option value="2000000">฿2,000,000</option>
+                  <option value="2250000">฿2,250,000</option>
+                  <option value="2500000">฿2,500,000</option>
+                  <option value="2750000">฿2,750,000</option>
+                  <option value="3000000">฿3,000,000</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="control-label" for="name">BEDROOMS</label>
+                <select class="form-control form-control2">
+                  <option value="">Any Beds</option>
+                  <option value="<1">Studio only</option>
+                  <option value="<=1">Studio / 1 br</option>
+                  <option value="1">1 bedroom</option>
+                  <option value="2">2 bedrooms</option>
+                  <option value="3">3 bedrooms</option>
+                  <option value="4">4 bedrooms</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="control-label" for="name">BATHROOMS</label>
+                <select class="form-control form-control2">
+                  <option value="">Any Baths</option>
+                  <option value=">=1">1 or more</option>
+                  <option value=">=1.5">1.5 or more</option>
+                  <option value=">=2">2 or more</option>
+                  <option value=">=2.5">2.5 or more</option>
+                  <option value=">=3">3 or more</option>
+                  <option value=">=3.5">3.5 or more</option>
+                  <option value=">=4">4 or more</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row margin_top">
+            <div class="col-md-3"> </div>
+            <div class="col-md-3"> </div>
+            <div class="col-md-3"> </div>
+            <div class="col-md-3">
+              <div class="form-group pull-right">
+                <button type="button" class="btn btn-primary btn2">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="vote2" tabindex="-1" role="dialog" aria-labelledby="voteLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="panel-title" id="voteLabel"><span class="glyphicon glyphicon-arrow-right"></span> Register</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-center"> Register for free to save this property and receive updates on price and status changes. </p>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-login">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6"> <a href="#" class="active" id="login-form-link">Login</a> </div>
+                  <div class="col-xs-6"> <a href="#" id="register-form-link">Register</a> </div>
+                </div>
+                <hr>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                      <div class="form-group">
+                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="text-center"> <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                      <div class="form-group">
+                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="css/chosen.css">
+<link rel="stylesheet" href="https://rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css">
+<script src="https://rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"></script> 
+<script src="js/chosen.jquery.min.js"></script> 
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+var $chosen = $('.chosen-select').chosen({
+  
+});
+
+$chosen.change(function () {
+  var $this = $(this);
+  var chosen = $this.data('chosen');
+  var search = chosen.search_container.find('input[type="text"]');
+  
+  search.prop('disabled', $this.val() !== null);
+  
+  if (chosen.active_field) {
+    search.focus();
+  }
+});
+
+$(function() {
+
+    $('#login-form-link').click(function(e) {
+    	$("#login-form").delay(100).fadeIn(100);
+ 		$("#register-form").fadeOut(100);
+		$('#register-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+	$('#register-form-link').click(function(e) {
+		$("#register-form").delay(100).fadeIn(100);
+ 		$("#login-form").fadeOut(100);
+		$('#login-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+
+});
+$(document).ready(function() {
+    $('.teams').multiselect({
+        templates: { // Use the Awesome Bootstrap Checkbox structure
+            li: '<li><div class="checkbox"><label></label></div></li>'
+        }
+    });
+    $('.multiselect-container div.checkbox').each(function (index) {
+
+        var id = 'multiselect-' + index,
+            $input = $(this).find('input');
+
+        // Associate the label and the input
+        $(this).find('label').attr('for', id);  
+        $input.attr('id', id);
+
+        // Remove the input from the label wrapper
+        $input.detach();
+
+        // Place the input back in before the label
+        $input.prependTo($(this));
+
+        $(this).click(function (e) {
+            // Prevents the click from bubbling up and hiding the dropdown
+            e.stopPropagation();
+        });
+
+    });
+});
+
+</script>
+</body>
+</html>

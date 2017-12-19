@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>index</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+.checkbox label:after, .radio label:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.checkbox .cr, .radio .cr {
+	position: relative;
+	display: inline-block;
+	border: 1px solid #a9a9a9;
+	border-radius: .25em;
+	width: 1.3em;
+	height: 1.3em;
+	float: left;
+	margin-right: .5em;
+}
+.radio .cr {
+	border-radius: 50%;
+}
+.checkbox .cr .cr-icon, .radio .cr .cr-icon {
+	position: absolute;
+	font-size: .8em;
+	line-height: 0;
+	top: 50%;
+	left: 20%;
+}
+.radio .cr .cr-icon {
+	margin-left: 0.04em;
+}
+.checkbox label input[type="checkbox"], .radio label input[type="radio"] {
+	display: none;
+}
+.checkbox label input[type="checkbox"] + .cr > .cr-icon, .radio label input[type="radio"] + .cr > .cr-icon {
+	transform: scale(3) rotateZ(-20deg);
+	opacity: 0;
+	transition: all .3s ease-in;
+}
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon, .radio label input[type="radio"]:checked + .cr > .cr-icon {
+	transform: scale(1) rotateZ(0deg);
+	opacity: 1;
+}
+.checkbox label input[type="checkbox"]:disabled + .cr, .radio label input[type="radio"]:disabled + .cr {
+	opacity: .5;
+}
+.container-fluid.nav-container.border_buttom {
+    background: #fff;
+}
+body {
+    background-image: url("https://static1.squarespace.com/static/56392e22e4b06f9cf23dc33e/t/566a46f1e0327c71c29669c3/1449805554360/property-connect-home.jpg?format=2500w");
+    background-repeat: no-repeat;
+    
+}
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {     
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+    margin: 20%;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<header class="">
+<div class="container">
+<div class="row">
+  <div class="col-lg-2"><a href="#"><img src="image/logo_site.png" class="img-responsive" style="margin:10px 0px;"></a></div>
+  <div class="col-lg-10">
+  <div class="rigit_sign"><a href="sign.html" data-toggle="modal" data-target="#vote2">Sign In</a></div>
+  </div>
+  </div>
+  </div>
+</header>
+<div class=" container-fluid nav-container border_buttom"> 
+  <!-- Static navbar -->
+  <div class="navbar navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <!--          <a class="navbar-brand" href="#">Project name</a>--> 
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">SALES </a></li>
+          <li class="dropdown menu-large"> <a href="rentals.html" class="dropdown-toggle" data-toggle="dropdown"> RENTALS</a>
+            <ul class="dropdown-menu megamenu row">
+              <li class="col-sm-3">
+                <ul>
+                  <li><a href="#" class="nav-child">Tenant community</a></li>
+                  <li><a href="#">Central West</a></li>
+                  <li><a href="#">City & East</a></li>
+                  <li><a href="#">Inner West </a></li>
+                  <li><a href="#">Canterbury Bankstown</a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li><a href="#" class="nav-child">Living in my home</a></li>
+                  <li><a href="#">Rent & Payments</a></li>
+                  <li><a href="#">Block Meetings</a></li>
+                  <li><a href="#">Complaints & Appeals</a></li>
+                  <li><a href="#">Neighbour Disputes</a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li><a href="#" class="nav-child">Getting involved</a></li>
+                  <li><a href="#">Building bridges</a></li>
+                  <li><a href="#">TAG</a></li>
+                  <li><a href="#">Tenants workshops</a></li>
+                  <li><a href="#">Aboriginal working group</a></li>
+                  <li><a href="#">Tenant survey</a></li>
+                  <li><a href="#">Your views</a></li>
+                  <li><a href="#">What's on</a></li>
+                  <li><a href="#">Photos</a></li>
+                  <li><a href="#">Stories</a></li>
+                  <li><a href="#">Community gardens </a></li>
+                </ul>
+              </li>
+              <li class="col-sm-3">
+                <ul>
+                  <li><a href="#" class="nav-child">I Need Help</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Housing team</a></li>
+                  <li><a href="#">Jobs</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="buildings.html">BUILDINGS</a></li>
+          <li><a href="#" class="last">BLOG</a></li>
+        </ul>
+        <div class="col-sm-3 col-md-3 pull-right">
+          <form class="navbar-form" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control form-controls" placeholder="Search" name="q">
+              <div class="input-group-btn">
+                <button class="btn btn-default btns" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg">
+          <li><a href=""><i class="fa fa-lock"></i> Tenant login</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="row">
+
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  
+</div>
+</div>
+
+
+
+<div class=" container-fluid footer">
+  <div class="container">
+    <div class="row">
+      <ul class="footer_buttom">
+       
+      </ul>
+      <div class="footer_text"> <span class="Footer-text"> Zillow Inc. Sites © 2006-2017 Zillow <span class="only-print"><b>https://streeteasy.com/</b></span> <a class="Footer-text" href="#" rel="nofollow">Made In Bangkok</a> Powered by Bikes, Coffee and Doughnuts. </span> </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="css/chosen.css">
+<script src="js/chosen.jquery.min.js"></script> 
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+var $chosen = $('.chosen-select').chosen({
+  
+});
+
+$chosen.change(function () {
+  var $this = $(this);
+  var chosen = $this.data('chosen');
+  var search = chosen.search_container.find('input[type="text"]');
+  
+  search.prop('disabled', $this.val() !== null);
+  
+  if (chosen.active_field) {
+    search.focus();
+  }
+});
+</script> 
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
