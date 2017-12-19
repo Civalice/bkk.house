@@ -355,21 +355,6 @@ $restofthailand = $clsadvansearch->getrestofthailand();
                   </div>
 					<?php } ?>
                 </div>
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="big_separator items item-grid">
-                      <h2>Rest Of Thailand</h2>
-                    </div>
-                  </div>
-                  <div class="content">
-				  <?php foreach($restofthailand as $restthailand) { 				  
-					$image = $restthailand['Image1'];
-					$imageexp = explode(',',$image);
-					?>
-                    <div class="col-xs-12 col-sm-4"> <img src="admin/uploadimages/<?=$imageexp[0];?>"" class="img-responsive2" /> <a href="details.php?proname=<?=base64_encode($restthailand['ID']);?>" class="bottom_link"> MUST SEE! Rare <?=$restthailand['badrooms'];?> -Bedroom in Bay </a> </div>    
-				  <?php } ?>					  
-                  </div>
-                </div>
                 <!--<div class="row">
                   <div class="col-lg-12">
                     <div class="big_separator items item-grid">

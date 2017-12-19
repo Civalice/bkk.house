@@ -104,12 +104,6 @@ $(document).ready(function() {
         </div>
         <div>
           <div class="big_separator items item-grid margin_top">
-            <h2>HIGHLIGHTS </h2>
-            <p> <?=$result['Highlites'];?></p>
-          </div>
-        </div>
-        <div>
-          <div class="big_separator items item-grid margin_top">
             <h2>AMENITIES </h2>
             <p> <?=$result['Amenities'];?><br>
             </p>
@@ -118,9 +112,6 @@ $(document).ready(function() {
             <h2>LOCATED IN <?=$result['Location'];?> </h2>
             <div class="details_info"> <a href="#"><?=$result['Location'];?> </a> <?=$result['LocationByMetro'];?> </div>
             <div class="details_info"> Co-op in <a href="#">Jackson Heights</a> </div>
-            <div class="details_info"> 12 unitsBuilt in 1921 </div>
-            <div class="details_info"> SALES LISTINGS: 1 active, 2 in contract and 2 previous</div>
-            <div class="details_info"> DOCUMENTS AND PERMITS: 12 documents <a class="btn btn-default pull-right margin_top"  href="#" id="more_in_building_button">more about the building</a> </div>
           </div>
           <div class="big_separator items item-grid margin_top" style="margin-top:40px;" hidden>
             <h2>PRICE HISTORY & UNIT INFORMATION </h2>
@@ -158,15 +149,6 @@ $(document).ready(function() {
         <div class="details_info"> <span class="nobreak">Rental Unit</span> <span class="nobreak">in <a href="https://streeteasy.com/for-rent/upper-east-side"><?=$result['Location'];?></a></span> </div>
         
         
-        <div class="vitals top_spacer">
-          <div class="details_info">
-            <h6>Listing Availability</h6>
-            Available now </div>
-          <div class="details_info">
-            <h6>Days On Market</h6>
-            <p> 8 days </p>
-          </div>
-        </div>
         <div class="vitals top_spacer margin_top" hidden>
           <div class="details_info"> CONTACT AGENT
             <form class="margin_top">
@@ -187,7 +169,7 @@ $(document).ready(function() {
 
       <div class="col-lg-12">
         <div class="big_separator items item-grid margin_top">
-          <h2>SIMILAR SALES </h2>
+          <h2>CONDOS</h2>
           <div class="col-xs-12 col-sm-3">
             <div class="right_text">FEATURED Bangkok APARTMENTS</div>
             <div class=""> <a class="img-carbox3" href="#"> <img src="https://cdn-img3.streeteasy.com/nyc/image/59/254099959.jpg"> </a>
@@ -264,11 +246,7 @@ $(document).ready(function() {
       </div>
 
       <div class="col-lg-12">
-        <div class="big_separator items item-grid margin_top">
-          <h2>LISTING PROVIDED BY</h2>
-          <p><a href="#"><?=$result['OwnerName'];?></a></p>
           <p>Report a problem</p>
-        </div>
       </div>
     </div>
   </div>
