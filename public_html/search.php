@@ -47,8 +47,11 @@ extract($_POST);
  
  
  <div class="col-lg-12">
- <h3><strong><?=$noof;?></strong> Upper West Side Apartments </h3>
- 
+  <?php if($noof > 0) : ?>
+    <h3><strong><?=$noof;?></strong> Upper West Side Apartments </h3>
+  <?php else : ?>
+    <h3> Result not found. </h3>
+  <?php endif; ?>
 	<div> 
 		<a href="#" class="button_modal" data-toggle="modal" data-target="#vote" data-original-title style="margin-right:20px;" hidden>Refine This Search </a>   
 		

@@ -110,8 +110,7 @@ $(document).ready(function() {
           </div>
           <div class="big_separator items item-grid margin_top">
             <h2>LOCATED IN <?=$result['Location'];?> </h2>
-            <div class="details_info"> <a href="#"><?=$result['Location'];?> </a> <?=$result['LocationByMetro'];?> </div>
-            <div class="details_info"> Co-op in <a href="#">Jackson Heights</a> </div>
+            <div class="details_info"> <a href="#"><?=ucfirst($result['Location']);?> </a> <?=ucfirst($result['LocationByMetro']);?> </div>
           </div>
           <div class="big_separator items item-grid margin_top" style="margin-top:40px;" hidden>
             <h2>PRICE HISTORY & UNIT INFORMATION </h2>
@@ -143,11 +142,10 @@ $(document).ready(function() {
       </div>
       <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <h1 class="building-title"> <a class="incognito" href="#"><?=$result['PropertyName'];?></a> </h1>
-        <div class="price3 "> $<?=$result['RentPrice'];?> <span class="secondary_text">for rent</span> </div>
+        <div class="price3 "> ฿<?=$result['RentPrice'];?> <span class="secondary_text">for rent</span> </div>
 		
-        <div class="details_info"> <span class="detail_cell first_detail_cell">5.5 rooms</span> <span class="detail_cell "><?=$result['Bedrooms'];?> beds</span> <span class="detail_cell last_detail_cell"><?=$result['Bathrooms'];?> Baths</span></div>
-        <div class="details_info"> <span class="nobreak">Rental Unit</span> <span class="nobreak">in <a href="https://streeteasy.com/for-rent/upper-east-side"><?=$result['Location'];?></a></span> </div>
-        
+        <div class="details_info"><span class="detail_cell "><?=$result['Bedrooms'];?> beds</span> <span class="detail_cell last_detail_cell"><?=$result['Bathrooms'];?> Baths</span></div>
+        <div class="details_info"> <span class="nobreak">Rental Unit</span> <span class="nobreak">in <?=ucfirst($result['Location']);?></span> </div>
         
         <div class="vitals top_spacer margin_top" hidden>
           <div class="details_info"> CONTACT AGENT
@@ -166,85 +164,55 @@ $(document).ready(function() {
       </div>
     </div>
     <div>
-
+<?php 
+$clsadvansearch = new searching();
+$propertytype = $result['PropertyType'];
+$featuredata = $clsadvansearch->getfeatureproperty($page, $propertytype);
+$featurerow = mysqli_num_rows($featuredata);
+if ($featurerow > 0) : ?>
       <div class="col-lg-12">
         <div class="big_separator items item-grid margin_top">
-          <h2>CONDOS</h2>
+          <h2>Featured <?=$propertytype?></h2>
+
+          <?php foreach($featuredata as $data) 
+          { 
+            ?>
+
           <div class="col-xs-12 col-sm-3">
-            <div class="right_text">FEATURED Bangkok APARTMENTS</div>
-            <div class=""> <a class="img-carbox3" href="#"> <img src="https://cdn-img3.streeteasy.com/nyc/image/59/254099959.jpg"> </a>
+            <div class=""> <a class="img-carbox3" href="details.php?proname=<?=base64_encode($data['ID']);?>"> <img src="admin/uploadimages/<?=explode(",", $data['Image1'])[0];?>"> </a>
               <div class="carbox-content">
                 <h4 class="carbox-title">
-                  <p class="slug2">Featured Building</p>
+                  <p class="slug2">Featured <?=$propertytype?></p>
                 </h4>
-                <h5 class="text-left2 box_text "> Austin Nichols House</h5>
-                <span class="price">฿15,000,000</span> </div>
+                <h5 class="text-left2 box_text ">  <?=$data['PropertyName']?></h5>
+                <span class="price"><?php
+                  if ($data['SalePrice'])
+                  {                    
+                    echo $data['SalePrice'] . ' For Sale';
+                  }
+                  else
+                  {
+                    echo $data['RentPrice'] . ' For Rent';
+                  }
+                ?>
+                </span> </div>
               <div class="carbox-read-more">
                 <ul class="box_ul">
-                  <li>4 beds</li>
-                  <li>4.5 baths</li>
-                  <li><span>4,158 ft²</span></li>
+                  <li><?=$data['Bedrooms']?> beds</li>
+                  <li><?=$data['Bathrooms']?> baths</li>
+                  <li><span><?=$data['Sizesqm']?> ft²</span></li>
                 </ul>
               </div>
               <div class="carbox-read-more">
-                <div class="box_butttom text-left2"> Condo in Nolita</div>
-              </div>
-              <div class="carbox-read-more">
-                <div class="box_butttom text-left2"> Listed by Compass </div>
+                <div class="box_butttom text-left2"> <?=$data['PropertyType']?> at <?=$data['Location']?></div>
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-3">
-            <div class="right_text">FEATURED Bangkok APARTMENTS</div>
-            <div class=""> <a class="img-carbox3" href="#"> <img src="https://cdn-img3.streeteasy.com/nyc/image/59/254099959.jpg"> </a>
-              <div class="carbox-content">
-                <h4 class="carbox-title">
-                  <p class="slug2">Featured Building</p>
-                </h4>
-                <h5 class="text-left2 box_text "> Austin Nichols House</h5>
-                <span class="price">฿15,000,000</span> </div>
-              <div class="carbox-read-more">
-                <ul class="box_ul">
-                  <li>4 beds</li>
-                  <li>4.5 baths</li>
-                  <li><span>4,158 ft²</span></li>
-                </ul>
-              </div>
-              <div class="carbox-read-more">
-                <div class="box_butttom text-left2"> Condo in Nolita</div>
-              </div>
-              <div class="carbox-read-more">
-                <div class="box_butttom text-left2"> Listed by Compass </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-3">
-            <div class="right_text">FEATURED Bangkok APARTMENTS</div>
-            <div class=""> <a class="img-carbox3" href="#"> <img src="https://cdn-img3.streeteasy.com/nyc/image/59/254099959.jpg"> </a>
-              <div class="carbox-content">
-                <h4 class="carbox-title">
-                  <p class="slug2">Featured Building</p>
-                </h4>
-                <h5 class="text-left2 box_text "> Austin Nichols House</h5>
-                <span class="price">฿15,000,000</span> </div>
-              <div class="carbox-read-more">
-                <ul class="box_ul">
-                  <li>4 beds</li>
-                  <li>4.5 baths</li>
-                  <li><span>4,158 ft²</span></li>
-                </ul>
-              </div>
-              <div class="carbox-read-more">
-                <div class="box_butttom text-left2"> Condo in Nolita</div>
-              </div>
-              <div class="carbox-read-more">
-                <div class="box_butttom text-left2"> Listed by Compass </div>
-              </div>
-            </div>
-          </div>
+          <?php } ?>
+
         </div>
       </div>
-
+<?php endif ?>
       <div class="col-lg-12">
           <p>Report a problem</p>
       </div>

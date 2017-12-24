@@ -70,8 +70,8 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.php">SALES </a></li>
-          <li class=""> <a href="index.php" > RENTALS</a>
+          <li class="active"><a href="index.php?page=sales">SALES </a></li>
+          <li class=""> <a href="index.php?page=rentals" > RENTALS</a>
             <ul class="dropdown-menu megamenu row" hidden>
               <li class="col-sm-3">
                 <ul>
@@ -116,7 +116,7 @@
               </li>
             </ul>
           </li>
-          <li><a href="buildings.php">BUILDINGS</a></li>
+          <!--<li><a href="buildings.php">BUILDINGS</a></li>!-->
           <li><a href="#" class="last">BLOG</a></li>
         </ul>
         <div class="col-sm-3 col-md-3 pull-right" hidden>
