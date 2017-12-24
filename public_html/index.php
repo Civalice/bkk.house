@@ -71,21 +71,21 @@ include("function.php");
         <div class="bs-example">
           <div class="border_tab">
             <ul class="banner_tab">
-              <li role="presentation" onclick="cahangetab('sales')" class="active2"><a style="cursor:pointer">SALES </a></li>
-              <li role="presentation" onclick="cahangetab('rent')"><a style="cursor:pointer" >RENTALS</a></li>
-              <li role="presentation" onclick="location.href='buildings.php'"><a href="buildings.php">BUILDINGS</a></li>
+              <li role="presentation" onclick="changetab('sales')" class="active2"><a style="cursor:pointer">SALES </a></li>
+              <li role="presentation" onclick="changetab('rent')"><a style="cursor:pointer" >RENTALS</a></li>
+              <!--<li role="presentation" onclick="location.href='buildings.php'"><a href="buildings.php">BUILDINGS</a></li>!-->
             </ul>
           </div>
         </div>
       </div>
 	  <form  method="post" action="search.php">
-	  <input type="hidden" id="inputhiddenpropertytype" name="hiddenpropertysalesorrent"value="sales">
+	  <input type="hidden" id="inputhiddenpropertytype" name="hiddenpropertysalesorrent" value='sales'>
       <div class="row margin_top">
         <div class="col-md-3">
           <div class="form-group">
             <label class="control-label" for="name">LOCATION</label>
             <select class="form-control form-control2" id="location" name="location">
-             <option disabled selected value>-- Any --</option>
+             <option value>-- Any --</option>
 				<option value="ari-phaholyothin-7">Ari (Phaholyothin 7)</option>
 				<option value="asoke">Asoke</option>
 				<option value="bangkapi-buengkum">Bangkapi, Buengkum</option>
@@ -150,7 +150,7 @@ include("function.php");
           <div class="form-group">
             <label class="control-label" for="name">LOCATION By Metro</label>
             <select class="form-control form-control2" id="location" name="locationbymetro">
-             <option disabled selected value>-- Any --</option>
+             <option value>-- Any --</option>
 				<option value="arl-ladkrabang">ARL Ladkrabang</option>
 				<option value="brt-rama-3-bridge">BRT Rama 3 Bridge</option>
 				<option value="brt-technic-krungthep">BRT Technic Krungthep</option>
@@ -209,7 +209,7 @@ include("function.php");
           <div class="form-group">
             <label class="control-label" for="name">TYPE</label>
             <select id="propertytype" name="propertytype" class="form-control form-control2">
-				<option disabled selected value>-- Select --</option>
+				<option value>-- Any --</option>
               <option value="Condo">Condo</option>
               <option value="House">House</option>
               <option value="Commercial Building">Commercial Building</option>
@@ -237,7 +237,7 @@ include("function.php");
           <div class="form-group">
             <label class="control-label" for="name" >BEDROOMS</label>
             <select class="form-control form-control2" id="noOfBedrooms" name="noOfBedrooms"> 
-			 <option disabled selected value>-- Select --</option>
+			 <option value>-- Any --</option>
               <option value="1">1 bedroom</option>
               <option value="2">2 bedrooms</option>
               <option value="3">3 bedrooms</option>
@@ -249,7 +249,7 @@ include("function.php");
           <div class="form-group">
             <label class="control-label" for="name">BATHROOMS</label>
             <select class="form-control form-control2" id="noOfBathrooms" name="noOfBathrooms">
-              <option disabled selected value>-- Select --</option>
+              <option value>-- Any --</option>
               <option value="1">1 or more</option>              
               <option value="2">2 or more</option>              
               <option value="3">3 or more</option>              
@@ -275,10 +275,18 @@ include("function.php");
 </div>
 <?php
 $clsadvansearch = new searching();
-$homedatacommercial = $clsadvansearch->gethomepagedata();
-$homelanddata = $clsadvansearch->gethomelandproperty();
-$housedataproperty = $clsadvansearch->gethouseproperty();
-$restofthailand = $clsadvansearch->getrestofthailand();
+if (isset($_GET['page']))
+{
+	$page = $_GET['page'];
+}
+else
+{
+	$page = 'sales';
+}
+$homedatacommercial = $clsadvansearch->gethomepagedata($page);
+$homelanddata = $clsadvansearch->gethomelandproperty($page,2);
+$housedataproperty = $clsadvansearch->gethouseproperty($page);
+$restofthailand = $clsadvansearch->getrestofthailand($page);
 
 ?>
 
@@ -408,7 +416,11 @@ $restofthailand = $clsadvansearch->getrestofthailand();
                           <p class="slug2"><?=$landdata['PropertyType'];?></p>
                         </h4>
                         <h5 class="text-left2 box_text "> <?=$landdata['PropertyName'];?></h5>
+                        <?php if($page == 'sales') : ?>
                         <span class="price"><?=$landdata['SalePrice'];?> For Sale</span> </div>
+                    	<?php else : ?>
+                        <span class="price"><?=$landdata['RentPrice'];?> For Rent</span> </div>                    		
+                        <?php endif?>
                       <div class="carbox-read-more">
                         <ul class="box_ul">
                           <li><?=$landdata['Bedrooms'];?> Beds</li>
@@ -418,9 +430,6 @@ $restofthailand = $clsadvansearch->getrestofthailand();
                       </div>
                       <div class="carbox-read-more">
                         <div class="box_butttom text-left2"> Land in <?=$landdata['Location'];?></div>
-                      </div>
-                      <div class="carbox-read-more">
-                        <div class="box_butttom text-left2"> Listed by <?=$landdata['OwnerName'];?> </div>
                       </div>
                     </div>
 				
@@ -489,7 +498,7 @@ $(".banner_tab li").click(
 	  
     }
 );
-function cahangetab(val)
+function changetab(val)
 {
 if(val == 'rent')
 {

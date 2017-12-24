@@ -221,12 +221,15 @@ $result = $clsadvansearch->buildingsearch($location,$locationBymetro);
 	foreach($result as $res) { 
 	?>
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <div class="box"> <img src="admin/uploadimages/<?=$res['Image1'];?>">
+        <div class="box"> <img src="admin/uploadimages/<?=explode(",", $res['Image1'])[0];?>">
+          <!--
           <div class="BuildingCard-flag"> <span class="ActiveFlag"> 13 active listings </span> </div>
+          !-->
           <div class="info">
             <div class="BuildingCard-info" data-clickable="true">
               <h3 class="BuildingCard-title"> Rental in <a class="BuildingCard-titleLink" href="#"><?=$res['Location'];?></a> </h3>
               <a class="BuildingCard-addressLink" href="#"></a> <a class="BuildingCard-addressLink" data-click="link" href="#"><?=$res['LocationByMetro'];?></a>
+              <!--
               <div class="BuildingCard-properties">
                 <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--units"></span> 379 Units </div>
                 <div class="BuildingCard-property BuildingCard-property--divided"></div>
@@ -234,6 +237,7 @@ $result = $clsadvansearch->buildingsearch($location,$locationBymetro);
                 <div class="BuildingCard-property BuildingCard-property--divided"></div>
                 <div class="BuildingCard-property"> <span class="BuildingCard-propertyIcon BuildingCard-propertyIcon--build"></span> 2016 Built </div>
               </div>
+              !-->
             </div>
           </div>
         </div>

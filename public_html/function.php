@@ -28,9 +28,16 @@ class searching
 		}
 		if(! empty($priceFrom || $priceTo)) {
 			if($hiddensalesorRent == 'rent') {
-				$conditions[] = "RentPrice between $priceFrom and $priceTo";
+				$conditions[] = "`RentPrice` between $priceFrom and $priceTo AND `RentPrice` != 0";
 			} else {
-			$conditions[] = "SalePrice between $priceFrom and $priceTo";
+				$conditions[] = "`SalePrice` between $priceFrom and $priceTo AND `SalePrice` != 0";
+			}
+		}
+		else {
+			if($hiddensalesorRent == 'rent') {
+				$conditions[] = "`RentPrice` != 0";
+			} else {
+				$conditions[] = "`SalePrice` != 0";
 			}
 		}
 		if(! empty($bedrooms)) {
@@ -73,33 +80,80 @@ class searching
 			return mysqli_fetch_array($query);
 	}
 	
-	function gethomepagedata()
+	function gethomepagedata($type)
 	{
 			$conn = connect();
-			$query = "select * from propertydetails where IsFeatured = 'no' order by CreatedDate DESC Limit 2";
-			$result = mysqli_query($conn,$query);			
+			if ($type == 'sales')
+			{
+				$query = "select * from propertydetails where IsFeatured = 'no' AND `SalePrice` != 0 order by CreatedDate DESC Limit 2";
+				$result = mysqli_query($conn,$query);			
+			}
+			else if ($type == 'rentals')
+			{
+				$query = "select * from propertydetails where IsFeatured = 'no' AND `RentPrice` != 0 order by CreatedDate DESC Limit 2";
+				$result = mysqli_query($conn,$query);			
+			}
 			return $result;
 	}
-	function gethomelandproperty()
+	function gethomelandproperty($type)
 	{
 			$conn = connect();
-			$query = "select * from propertydetails where IsFeatured = 'yes' order by CreatedDate DESC Limit 2";
-			$result = mysqli_query($conn,$query);			
+			if ($type == 'sales')
+			{
+				$query = "select * from propertydetails where IsFeatured = 'yes' AND `SalePrice` != 0 order by CreatedDate DESC Limit 2";
+				$result = mysqli_query($conn,$query);			
+			}
+			else
+			{
+				$query = "select * from propertydetails where IsFeatured = 'yes' AND `RentPrice` != 0 order by CreatedDate DESC Limit 2";
+				$result = mysqli_query($conn,$query);			
+			}
 			return $result;
 	}
-	function gethouseproperty()
+	function getfeatureproperty($type, $propertytype)
 	{
 			$conn = connect();
-			$query = "select * from propertydetails where PropertyType = 'House' order by CreatedDate DESC Limit 1";
-			$result = mysqli_query($conn,$query);			
+			if ($type == 'sales')
+			{
+				$query = "select * from propertydetails where PropertyType = '$propertytype' AND IsFeatured = 'yes' AND `SalePrice` != 0 order by CreatedDate DESC Limit 3";
+				$result = mysqli_query($conn,$query);			
+			}
+			else
+			{
+				$query = "select * from propertydetails where PropertyType = '$propertytype' AND IsFeatured = 'yes' AND `RentPrice` != 0 order by CreatedDate DESC Limit 3";
+				$result = mysqli_query($conn,$query);			
+			}
+			return $result;
+	}
+	function gethouseproperty($type)
+	{
+			$conn = connect();
+			if ($type == 'sales')
+			{
+				$query = "select * from propertydetails where PropertyType = 'House' AND `SalePrice` != 0 order by CreatedDate DESC Limit 1";
+				$result = mysqli_query($conn,$query);			
+			}
+			else if ($type == 'rentals')
+			{
+				$query = "select * from propertydetails where PropertyType = 'House' AND `RentPrice` != 0 order by CreatedDate DESC Limit 1";
+				$result = mysqli_query($conn,$query);			
+			}
 			return $result;
 	}
 	
-	function getrestofthailand()
+	function getrestofthailand($type)
 	{
 			$conn = connect();
-			$query = "select * from propertydetails where PropertyType = 'RestofThailand' order by CreatedDate DESC Limit 3";
-			$result = mysqli_query($conn,$query);			
+			if ($type == 'sales')
+			{
+				$query = "select * from propertydetails where PropertyType = 'RestofThailand' AND `SalePrice` != 0  order by CreatedDate DESC Limit 3";
+				$result = mysqli_query($conn,$query);			
+			}
+			else if ($type == 'rentals')
+			{
+				$query = "select * from propertydetails where PropertyType = 'RestofThailand' AND `RentPrice` != 0 order by CreatedDate DESC Limit 3";
+				$result = mysqli_query($conn,$query);			
+			}
 			return $result;
 	}
 	
